@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B4A632C6-9DC7-4711-8080-1CBF7EEA0D14}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SipXTapiDotNet</RootNamespace>
+    <AssemblyName>SipXTapiDotNet</AssemblyName>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>SipXTapiDotNet.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DefineConstants>SIPXTAPI_DLL="C:\DevRootSipX\sipXcallLib\sipXtapi\debug\sipXtapid.dll"</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>None</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>SipXTapiDotNet.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DefineConstants>SIPXTAPI_DLL="sipXtapi.dll"</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Management" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Runtime" />
+    <Import Include="System.Runtime.InteropServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Enums\SipxAudioDataFormat.vb" />
+    <Compile Include="Enums\SipxMediaDeviceType.vb" />
+    <Compile Include="Enums\SipxAecMode.vb" />
+    <Compile Include="Enums\SipxConfigEvent.vb" />
+    <Compile Include="Enums\SipxInfoStatusEvent.vb" />
+    <Compile Include="Enums\SipxLineStateCause.vb" />
+    <Compile Include="Enums\SipxMediaCause.vb" />
+    <Compile Include="Enums\SipxMediaEvent.vb" />
+    <Compile Include="Enums\SipxMediaType.vb" />
+    <Compile Include="Enums\SipxMessageStatus.vb" />
+    <Compile Include="Enums\SipxNoiseReductionMode.vb" />
+    <Compile Include="Enums\SipxSecurityCause.vb" />
+    <Compile Include="Enums\SipxSecurityEvent.vb" />
+    <Compile Include="Enums\SipxSubscriptionCause.vb" />
+    <Compile Include="Enums\SipxSubscriptionState.vb" />
+    <Compile Include="Enums\SipxTransportType.vb" />
+    <Compile Include="Enums\SipxVideoBandwidth.vb" />
+    <Compile Include="Enums\SipxVideoDisplayType.vb" />
+    <Compile Include="EventQueueMonitor.vb" />
+    <Compile Include="SipxEventArgs\SipxCallEventArgs.vb" />
+    <Compile Include="SipxEventArgs\SipxLineEventArgs.vb" />
+    <Compile Include="SipxMedia.vb" />
+    <Compile Include="Enums\SipxEventCategory.vb" />
+    <Compile Include="SipxCall.vb" />
+    <Compile Include="Enums\SipxAudioBandwidth.vb" />
+    <Compile Include="SipxException.vb" />
+    <Compile Include="SipxInstance.vb" />
+    <Compile Include="Enums\SipxCallStateEvent.vb" />
+    <Compile Include="SipxConfig.vb" />
+    <Compile Include="SipxConference.vb" />
+    <Compile Include="Enums\SipxCallStateCause.vb" />
+    <Compile Include="Enums\SipxContactType.vb" />
+    <Compile Include="Enums\SipxLineStateEvent.vb" />
+    <Compile Include="Enums\SipxLogLevel.vb" />
+    <Compile Include="Enums\SipxResult.vb" />
+    <Compile Include="Enums\SipxSpeakerType.vb" />
+    <Compile Include="Enums\SipxToneId.vb" />
+    <Compile Include="SipxEvent.vb" />
+    <Compile Include="SipxHooks.vb" />
+    <Compile Include="SipxLine.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Structs\SipxConfigInfo.vb" />
+    <Compile Include="Structs\SipxInfoInfo.vb" />
+    <Compile Include="Structs\SipxInfoStatusInfo.vb" />
+    <Compile Include="Structs\SipxMediaInfo.vb" />
+    <Compile Include="Structs\SipxCallStateInfo.vb" />
+    <Compile Include="Structs\SipxCodecInfo.vb" />
+    <Compile Include="Structs\SipxAudioCodec.vb" />
+    <Compile Include="Structs\SipxLineStateInfo.vb" />
+    <Compile Include="Structs\SipxContactAddress.vb" />
+    <Compile Include="Structs\SipxCallOptions.vb" />
+    <Compile Include="SipxEventArgs\SipxEventArgs.vb" />
+    <Compile Include="Structs\SipxNotifyInfo.vb" />
+    <Compile Include="Structs\SipxSecurityInfo.vb" />
+    <Compile Include="Structs\SipxSubStatusInfo.vb" />
+    <Compile Include="Structs\SipxVideoCodec.vb" />
+    <Compile Include="Structs\SipxVideoDisplay.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
