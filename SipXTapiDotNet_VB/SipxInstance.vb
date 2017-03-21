@@ -313,13 +313,13 @@ Public Class SipxInstance
     m_IsDisposed = True
   End Sub
 
-    ' This code added by Visual Basic to correctly implement the disposable pattern.
-    Public Sub Dispose() Implements IDisposable.Dispose
-        ' Do not change this code.  Put cleanup code in Dispose(ByVal disposing As Boolean) above.
-        m_EventQueueMonitor.Shutdown()
-        Dispose(True)
-        GC.SuppressFinalize(Me)
-    End Sub
+  ' This code added by Visual Basic to correctly implement the disposable pattern.
+  Public Sub Dispose() Implements IDisposable.Dispose
+    ' Do not change this code.  Put cleanup code in Dispose(ByVal disposing As Boolean) above.
+    m_EventQueueMonitor.Shutdown()
+    Dispose(True)
+    GC.SuppressFinalize(Me)
+  End Sub
 #End Region
 
 End Class
